@@ -6,26 +6,18 @@ namespace AlgorithmQuestions
     internal class Program
     {
 
+       
+        static void Main(string[] args)
+        {
+          
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //123
-        //0.index = 1
-        //1.index = 2
-        //2.index = 3
-        public static bool IsPalindrome(int x)
+      
+    }
+    public class Questions 
+    {
+        public  bool IsPalindrome(int x)
         {
             string metin = x.ToString();
             string metin2 = "";
@@ -39,7 +31,7 @@ namespace AlgorithmQuestions
             return false;
         }
 
-        public static bool isPalindrome2(int x)
+        public  bool isPalindrome2(int x)
         {
             if (x < 0)
             {
@@ -56,8 +48,7 @@ namespace AlgorithmQuestions
             return temp == s;
         }
 
-
-        public static string LongestCommonPrefix(string[] strs)
+        public  string LongestCommonPrefix(string[] strs)
         {
             if (strs == null)
                 return "";
@@ -81,11 +72,11 @@ namespace AlgorithmQuestions
                     max = i;
                 }
             }
-             string prefix = "";
+            string prefix = "";
             char c;
             char c2;
             for (int i = 0; i < strs[min].Length; i++)
-            { 
+            {
                 c = strs[min][i];
                 c2 = c;
                 for (int j = 0; j < strs.Length; j++)
@@ -107,11 +98,11 @@ namespace AlgorithmQuestions
             return prefix;
         }
 
-        public static int RomanToInt(string s)
+        public  int RomanToInt(string s)
         {
             int result = 0;
-            Dictionary<string,int> romans =  new Dictionary<string,int>();
-            romans.Add("I",1);
+            Dictionary<string, int> romans = new Dictionary<string, int>();
+            romans.Add("I", 1);
             romans.Add("V", 5);
             romans.Add("X", 10);
             romans.Add("L", 50);
@@ -125,10 +116,11 @@ namespace AlgorithmQuestions
             romans.Add("CD", 400);
             romans.Add("CM", 900);
 
- 
+
+
             for (int i = 0; i < s.Length; i++)
             {
-                if( i+ 1 < s.Length && romans.ContainsKey(s.Substring(i,2)) )
+                if (i + 1 < s.Length && romans.ContainsKey(s.Substring(i, 2)))
                 {
                     result += romans[s.Substring(i, 2)];
                     i++;
@@ -140,54 +132,6 @@ namespace AlgorithmQuestions
             }
             return result;
         }
-        static void Main(string[] args)
-        {
-            Console.WriteLine(RomanToInt("III"));
-
-            //Console.Write("Bir Sayı Giriniz : ");
-            //number1 = Convert.ToInt32(Console.ReadLine());
-
-            //string sayi1 = "100";
-            //string sayi2 = "q100";
-            //bool result;
-
-            //int sayii1 = Convert.ToInt32(sayi1);
-            //int sayii2 = Convert.ToInt32(sayi2);
-            //int sayi3 = int.Parse(sayi2);
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Console.Write("FOR SAYACI : ");
-            //    Console.WriteLine(i);
-            //}
-
-            /*
-             * 0 dan 100 e kadar gidecek
-             * her 20li katlarda o anki değerin tekrar 0 a kadar yazımı
-             * sonra devam taki 100 e kadar 
-             * 1
-             * .
-             * .
-             * .
-             * 19
-             * 20
-             * 19
-             * 18
-             * .
-             * 2
-             * 1
-             * 0
-             * 21
-             * 22
-             * 23
-             * 
-             * 
-             * Given an integer x, return true if x is a palindrome, and false otherwise.
-            */
-
-
-        }
-
-
 
         public void SumTwoNumbers()
         {
@@ -208,4 +152,5 @@ namespace AlgorithmQuestions
 
         }
     }
+
 }
